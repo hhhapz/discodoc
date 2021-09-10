@@ -1,18 +1,27 @@
 # Discodoc
 
-Discodoc, the golang discord documentation bot.
+A Go documentation bot for Discord, written with
+[hhhapz/doc](https://github.com/hhhapz/doc).
 
-It will query the docs for you using a single simple command,
-and will display it in such a way that does not hinder the conversation nor the user.
+---
 
-It is planned to be, and will be used in [the Discord Gophers](https://discord.gg/golang).
+Discodoc is written in Go, and uses slash commands to query Go documentation
+with a single command (`/docs query:strings.split`).
+
+The bot will display minimal content, and allow users to view expanded
+content privately, to prevent hindrance to other users and the conversation
+topic.
+
+The bot is created to be used in the [Discord Gophers](https://discord.gg/golang).
 
 ## Usage
 
-```sh
+```discord
+/docs query:fmt
 /docs query:fmt.Errorf 
-```
-
-```sh
-/docs query:github.com/hhhapz/doc New
+/docs query:fmt Errorf 
+/docs query:github.com/hhhapz/doc.package
+/docs query:github.com/hhhapz/doc searcher search 
+/docs query:http
+/docs query:net/http
 ```
